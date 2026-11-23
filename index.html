@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OPSIDIA | We Help You Operationalize Your Vision</title>
+<meta name="description" content="OPSIDIA is a management consulting firm led by Racheal Allen. We help mission-driven startups and nonprofits build capacity through program design, fractional operations support, and technical assistance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #0F1F38;
+  --navy-light: #1A2F4D;
+  --gold: #C9A227;
+  --gold-light: #E5C76B;
+  --cream: #FAF7F0;
+  --cream-dark: #F0EBDD;
+  --text: #1A1A1A;
+  --text-light: #5A5A5A;
+  --white: #FFFFFF;
+}
+body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; background: var(--white); }
+h1, h2, h3, h4 { font-family: 'Fraunces', serif; line-height: 1.2; }
+a { text-decoration: none; color: inherit; }
+
+/* Demo Banner */
+.demo-banner { background: #FF6B35; color: white; text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; position: sticky; top: 0; z-index: 1000; }
+.demo-banner a { text-decoration: underline; }
+
+/* Nav */
+nav { background: var(--navy); padding: 20px 0; position: sticky; top: 36px; z-index: 999; box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+.nav-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--white); letter-spacing: 2px; }
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--gold); color: var(--navy) !important; padding: 10px 24px; border-radius: 4px; font-weight: 600; }
+.nav-cta:hover { background: var(--gold-light); }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color: var(--white); padding: 100px 24px 80px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(201,162,39,0.15) 0%, transparent 70%); border-radius: 50%; }
+.hero-container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-eyebrow { color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; }
+.hero h1 { font-size: 56px; font-weight: 600; max-width: 800px; margin-bottom: 24px; }
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero p { font-size: 20px; color: rgba(255,255,255,0.85); max-width: 650px; margin-bottom: 36px; line-height: 1.7; font-weight: 300; }
+.hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 16px 32px; border-radius: 4px; font-weight: 600; font-size: 15px; transition: all 0.3s; }
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline { border: 2px solid rgba(255,255,255,0.3); color: var(--white); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+.hero-stats { display: flex; gap: 60px; margin-top: 60px; flex-wrap: wrap; }
+.stat { border-left: 2px solid var(--gold); padding-left: 20px; }
+.stat-number { font-family: 'Fraunces', serif; font-size: 36px; font-weight: 700; color: var(--white); }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+/* Section */
+.section { padding: 80px 24px; }
+.section-container { max-width: 1200px; margin: 0 auto; }
+.section-eyebrow { color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
+.section h2 { font-size: 42px; font-weight: 600; margin-bottom: 20px; color: var(--navy); }
+.section-intro { font-size: 18px; color: var(--text-light); max-width: 700px; margin-bottom: 48px; line-height: 1.7; }
+
+/* Services */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.service-card { background: var(--cream); padding: 40px 32px; border-radius: 8px; transition: transform 0.3s, box-shadow 0.3s; }
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+.service-icon { width: 56px; height: 56px; background: var(--navy); color: var(--gold); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 24px; }
+.service-card h3 { font-size: 24px; margin-bottom: 12px; color: var(--navy); }
+.service-card p { color: var(--text-light); font-size: 15px; line-height: 1.7; margin-bottom: 20px; }
+.service-card ul { list-style: none; margin-bottom: 24px; }
+.service-card li { padding: 6px 0 6px 24px; position: relative; font-size: 14px; color: var(--text-light); }
+.service-card li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-weight: 600; }
+.service-link { color: var(--navy); font-weight: 600; font-size: 14px; border-bottom: 2px solid var(--gold); padding-bottom: 2px; }
+
+/* About Racheal */
+.about { background: var(--cream); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; }
+.about-image { background: linear-gradient(135deg, var(--navy), var(--navy-light)); border-radius: 12px; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: 'Fraunces', serif; font-size: 120px; font-weight: 700; position: relative; overflow: hidden; }
+.about-image::after { content: 'RA'; position: absolute; opacity: 0.1; font-size: 300px; }
+.about-content h2 { font-size: 36px; margin-bottom: 20px; }
+.about-content p { color: var(--text-light); margin-bottom: 16px; line-height: 1.8; }
+.credentials { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+.credential { background: var(--white); border: 1px solid #E0D9C8; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 500; color: var(--navy); }
+
+/* Results */
+.results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.result-card { border: 1px solid #E8E8E8; border-radius: 8px; padding: 36px; }
+.result-card h3 { font-size: 22px; margin-bottom: 12px; color: var(--navy); }
+.result-metric { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 700; color: var(--gold); margin: 16px 0 8px; }
+.result-card p { color: var(--text-light); font-size: 15px; line-height: 1.7; }
+
+/* Process */
+.process { background: var(--navy); color: var(--white); }
+.process h2 { color: var(--white); }
+.process .section-intro { color: rgba(255,255,255,0.75); }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 48px; }
+.step { position: relative; padding-top: 40px; }
+.step::before { content: ''; position: absolute; top: 0; left: 0; width: 40px; height: 3px; background: var(--gold); }
+.step-number { font-family: 'Fraunces', serif; font-size: 48px; font-weight: 300; color: rgba(255,255,255,0.2); margin-bottom: 16px; }
+.step h3 { font-size: 20px; margin-bottom: 12px; }
+.step p { color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.7; }
+
+/* Testimonials */
+.testimonial { background: var(--cream); padding: 48px; border-radius: 12px; max-width: 800px; margin: 0 auto; text-align: center; }
+.testimonial-quote { font-family: 'Fraunces', serif; font-size: 26px; line-height: 1.5; color: var(--navy); margin-bottom: 24px; font-weight: 400; }
+.testimonial-author { font-weight: 600; color: var(--navy); }
+.testimonial-role { font-size: 14px; color: var(--text-light); }
+
+/* CTA */
+.cta { background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%); color: var(--navy); text-align: center; padding: 80px 24px; }
+.cta h2 { font-size: 42px; margin-bottom: 16px; }
+.cta p { font-size: 18px; max-width: 600px; margin: 0 auto 32px; opacity: 0.85; }
+.btn-navy { background: var(--navy); color: var(--white); }
+.btn-navy:hover { background: var(--navy-light); transform: translateY(-2px); }
+
+/* Footer */
+footer { background: var(--navy); color: rgba(255,255,255,0.7); padding: 60px 24px 30px; }
+.footer-container { max-width: 1200px; margin: 0 auto; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-logo { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 700; color: var(--white); margin-bottom: 16px; }
+.footer-logo span { color: var(--gold); }
+.footer-grid h4 { color: var(--white); font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
+.footer-grid a { display: block; padding: 6px 0; font-size: 14px; transition: color 0.3s; }
+.footer-grid a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; font-size: 13px; flex-wrap: wrap; gap: 16px; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 36px; }
+  .hero p { font-size: 17px; }
+  .services-grid, .results-grid { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+  .section h2 { font-size: 32px; }
+  .hero-stats { gap: 32px; }
+}
+@media (max-width: 480px) {
+  .process-steps { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="demo-banner">
+  DEMO SITE — Built by Lexis Sapphire Studio for OPSIDIA. This is a preview, not the live site. <a href="https://lexissapphirestudio.com/">See more work →</a>
+</div>
+
+<nav>
+  <div class="nav-container">
+    <a href="#" class="logo">OPSIDIA<span>.</span></a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About Racheal</a>
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="nav-cta">Book a Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-container">
+    <div class="hero-eyebrow">Management Consulting • Detroit</div>
+    <h1>We help you <em>operationalize</em> your vision.</h1>
+    <p>OPSIDIA provides program design, fractional operations support, and technical assistance to mission-driven startups and nonprofits. We turn big ideas into systems that work.</p>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-gold">Book a Consultation</a>
+      <a href="#services" class="btn btn-outline">Explore Services</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">1,000+</div>
+        <div class="stat-label">Businesses Served</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">$2.8M</div>
+        <div class="stat-label">Grant Awarded</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Mission-Driven</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-container">
+    <div class="section-eyebrow">What We Do</div>
+    <h2>Services that build capacity</h2>
+    <p class="section-intro">We work with startups and nonprofits at every stage, from idea to scale. Our team brings decades of operational expertise to help you build systems that last.</p>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">◈</div>
+        <h3>Program Design</h3>
+        <p>We design programs from the ground up, with clear outcomes, measurable impact, and sustainable operations built in from day one.</p>
+        <ul>
+          <li>Logic models and theory of change</li>
+          <li>Curriculum and training design</li>
+          <li>Evaluation frameworks</li>
+          <li>Implementation roadmaps</li>
+        </ul>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">⬡</div>
+        <h3>Fractional Operations</h3>
+        <p>Get executive-level operations leadership without the full-time hire. We embed with your team to build systems, streamline processes, and drive efficiency.</p>
+        <ul>
+          <li>Interim COO services</li>
+          <li>Operations audits</li>
+          <li>Systems and automation</li>
+          <li>Team structure and hiring</li>
+        </ul>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">✦</div>
+        <h3>Technical Assistance</h3>
+        <p>Hands-on support for the operational challenges that keep you up at night. From SOPs to technology to compliance, we help you get it done.</p>
+        <ul>
+          <li>Standard operating procedures</li>
+          <li>Technology selection and setup</li>
+          <li>Financial systems and controls</li>
+          <li>Grant compliance and reporting</li>
+        </ul>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="section-container">
+    <div class="about-grid">
+      <div class="about-image">RA</div>
+      <div class="about-content">
+        <div class="section-eyebrow">Meet Your Consultant</div>
+        <h2>Racheal Allen</h2>
+        <p>Racheal is a Lean Six Sigma certified strategy, systems, and operations consultant with nearly twenty years of experience leading and serving startups and nonprofits.</p>
+        <p>In 2019, she created Operations School, a nonprofit that has trained over 1,000 BIPOC startup and nonprofit leaders. In 2022, she co-founded Centric Place, a first-of-its-kind hub for Black arts, culture, and entrepreneurship in Metro Detroit.</p>
+        <p>She previously served as the founding Chief Operating Officer for the Marygrove Conservancy, a 53-acre educational campus representing The Kresge Foundation's single largest investment, with a $100 million commitment.</p>
+        <div class="credentials">
+          <span class="credential">Lean Six Sigma Master Black Belt</span>
+          <span class="credential">Harvard Young American Leader</span>
+          <span class="credential">Crain's 40 Under 40</span>
+          <span class="credential">Small Business Hero of the Year</span>
+          <span class="credential">Michigan Chronicle Woman of Excellence</span>
+          <span class="credential">Leadership Detroit XLI</span>
+        </div>
+        <a href="#contact" class="btn btn-gold">Work With Racheal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="results">
+  <div class="section-container">
+    <div class="section-eyebrow">Impact</div>
+    <h2>Results that speak for themselves</h2>
+    <p class="section-intro">We've helped hundreds of organizations build the operational foundation they need to grow, scale, and sustain their impact.</p>
+    
+    <div class="results-grid">
+      <div class="result-card">
+        <h3>Operations School</h3>
+        <div class="result-metric">1,000+</div>
+        <p>Entrepreneurs and nonprofit leaders trained through our signature 9-week "Get Your Business Legit" program, with a $2.8M grant from the Michigan Economic Development Corporation to expand nationally.</p>
+      </div>
+      
+      <div class="result-card">
+        <h3>Centric Place</h3>
+        <div class="result-metric">10,000 sq ft</div>
+        <p>Hub for Black arts, culture, and entrepreneurship in Farmington Hills, housing Operations School and 10 companies, most founded by program graduates.</p>
+      </div>
+      
+      <div class="result-card">
+        <h3>Marygrove Conservancy</h3>
+        <div class="result-metric">$100M</div>
+        <p>Kresge Foundation investment stewarded as founding COO, overseeing operations for a 53-acre prenatal through 20th grade educational campus in Detroit.</p>
+      </div>
+      
+      <div class="result-card">
+        <h3>Community Impact</h3>
+        <div class="result-metric">$3M+</div>
+        <p>Contributed to the local Detroit economy through Operations School graduates, job creation, and business growth in underserved communities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section process" id="process">
+  <div class="section-container">
+    <div class="section-eyebrow">How We Work</div>
+    <h2>A proven process, tailored to you</h2>
+    <p class="section-intro">Every organization is different. Our process adapts to your needs, your timeline, and your goals, while bringing the rigor of Lean Six Sigma to every engagement.</p>
+    
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-number">01</div>
+        <h3>Discover</h3>
+        <p>We start by understanding your vision, your challenges, and your goals. Deep listening, honest assessment, no jargon.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">02</div>
+        <h3>Design</h3>
+        <p>We co-create a plan with clear outcomes, timelines, and metrics. You know exactly what you're getting and when.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">03</div>
+        <h3>Build</h3>
+        <p>We implement systems, processes, and structures. Hands-on support, not just a report that sits on a shelf.</p>
+      </div>
+      
+      <div class="step">
+        <div class="step-number">04</div>
+        <h3>Scale</h3>
+        <p>We help you sustain and scale what we've built together, with training, documentation, and ongoing support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-container">
+    <div class="testimonial">
+      <div class="testimonial-quote">"After attending every entrepreneurial program in the city, Operations School was the first program that taught me how to put everything I'd learned into practice."</div>
+      <div class="testimonial-author">Cathryn Coleman</div>
+      <div class="testimonial-role">Founder, Bouncing Around the Motor City</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Ready to operationalize your vision?</h2>
+  <p>Let's talk about where you are, where you want to go, and how OPSIDIA can help you get there.</p>
+  <a href="mailto:info@meetopsidia.com" class="btn btn-navy">Book a Consultation</a>
+  <p style="margin-top: 24px; font-size: 14px; opacity: 0.7;">Or email us directly at info@meetopsidia.com</p>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">OPSIDIA<span>.</span></div>
+        <p style="font-size: 14px; line-height: 1.7;">Management consulting for mission-driven startups and nonprofits. We help you operationalize your vision.</p>
+        <p style="font-size: 14px; margin-top: 16px;">Farmington Hills, Michigan<br>Serving Metro Detroit and beyond</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Program Design</a>
+        <a href="#services">Fractional Operations</a>
+        <a href="#services">Technical Assistance</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About Racheal</a>
+        <a href="#results">Results</a>
+        <a href="#process">Our Process</a>
+        <a href="https://operationsschool.com">Operations School</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="mailto:info@meetopsidia.com">Email Us</a>
+        <a href="https://www.linkedin.com/company/opsidia">LinkedIn</a>
+        <a href="#contact">Book a Call</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 OPSIDIA. All rights reserved.</span>
+      <span>Demo site built by <a href="https://lexissapphirestudio.com/" style="color: var(--gold);">Lexis Sapphire Studio</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
