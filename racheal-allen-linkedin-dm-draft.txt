@@ -1,0 +1,23 @@
+LINKEDIN DM TO RACHEAL ALLEN - DRAFT
+
+Hi Racheal,
+
+I was in Operations School with you, and I've been following your work with OPSIDIA, Operations School, and Centric Place. What you've built is incredible, especially the $2.8M grant to expand Operations School nationally.
+
+I noticed that OPSIDIA's website is just a single landing page right now, Operations School's site has some issues, and Centric Place doesn't have a website at all. I wanted to show you what all three could be.
+
+I built demos for each one:
+
+OPSIDIA: https://ls2studio.github.io/opsidia-demo/
+Operations School: https://ls2studio.github.io/operations-school-demo/
+Centric Place: https://ls2studio.github.io/centric-place-demo/
+
+Each one has its own distinct design that reflects what that business does, but they all work together as one ecosystem. OPSIDIA shows your consulting services and expertise. Operations School showcases the 9-week program and your impact. Centric Place highlights the space, events, and community.
+
+I'd love to build these out for real if you're interested. I run Lexis Sapphire Studio, where I build custom websites for Detroit businesses.
+
+Take a look and let me know what you think.
+
+Risha Alexis
+Lexis Sapphire Studio
+https://lexissapphirestudio.com/
